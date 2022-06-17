@@ -1,6 +1,6 @@
 {
   "name": "lovense-forza",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vibrate toys as you do specific actions in Forza",
   "main": "index.js",
   "scripts": {
