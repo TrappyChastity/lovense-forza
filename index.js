@@ -1,4 +1,4 @@
-const Forza = import('forza.js');
+const Forza = require('forza.js');
 const nodeFetch = import('node-fetch');
 const forza = new Forza.default();
 
@@ -84,7 +84,7 @@ const sendVibration = function (vibration) {
      * @example
      * var vibration = 0.5; // 50%
      */
-    let vibration = 0;
+    let vibration = 0.1;
     if (data.isRaceOn !== 0) {
       switch (vibrationFrom) {
         case 'rpm':
@@ -118,11 +118,10 @@ const sendVibration = function (vibration) {
           break;
       }
 
-      var vibrationInt = Math.round(vibration * maxVibration);
+      let vibrationInt = Math.round(vibration * maxVibration);
       if (vibrationInt > maxVibration) vibrationInt = maxVibration;
+      sendVibration(vibrationInt);
+      forza.on('telemetry', throttle(processData, 100));
     }
   };
-
-  sendVibration(vibrationInt);
-  forza.on('telemetry', throttle(processData, 100));
 })();
