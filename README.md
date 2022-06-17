@@ -33,4 +33,4 @@ You are looking for the
 * **platform** - _pc, android, ios_
 * **domain** - _The domain Lovense is on_ e.g `192-168-178-16.lovense.club`
 * **port** - _Will proably be `30010`_
-* **toyID** - _this can be found in the `toys` section, `"status": 1` means the currently active toy (_if one is connected_) if you have two or more (_including generations_) of the same device, the are likely to show up with the same name (_e.g Domi and Domi 2 both listed as domi_) but have different `hVersions`. If youve given them nicknames that's even easier_
+* **toyID** - _this can be found in the `toys` section, `"status": 1` means the currently active toy (_if one is connected_) if you have two or more (_including generations_) of the same device, the are likely to show up with the same name (_e.g Domi and Domi 2 both listed as domi_) but have different `hVersions`. If you've given them nicknames that's even easier_
